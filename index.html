@@ -5,31 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Login Page</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg">
+    <title>Login-page | login</title>
 </head>
 <body>
     
-    <form id="form-login">
-        <fieldset>
-            <legend>Login</legend>
-
-            <input class="inputs" id="input-user" type="text" placeholder="Usuário" autocomplete="off" aria-label="Usuário">
-        
-            <div class="inputs" id="password">
-                <input id="input-password" type="password" placeholder="Senha" aria-label="Senha">
+    <form class="form" id="form-login" method="" action="">
+        <fieldset id="fieldset-login">
+            
+            <h2>Login</h2>
+            
+            <div id="inputs">
+                <input class="inputs" id="input-user" type="text" placeholder="Usuário" autocomplete="off" aria-label="Usuário" required autofocus >
+                <input class="inputs" id="input-password" type="password" placeholder="Senha" aria-label="Senha" required>
                 <img id="img-eye" src="img/eye-close.svg" alt="icone-olho">
             </div>              
         
             <button id="button-enter">Entrar</button>
 
-                 
-            <p>Esqueceu sua senha? 
-                <a href="recover-password.html">Click aqui</a>
-            </p>
-            <p>Não possui uma conta?
-                <a href="register.html">Cadastre-se</a>
-            </p>
-            
+            <div id="recover-password-register">
+                <p>Esqueceu sua senha? 
+                    <a href="">Click aqui</a>
+                </p>
+                <p>Não possui uma conta?
+                    <a href="">Cadastre-se</a>
+                </p>
+            </div>
         </fieldset>            
     </form>                       
     
