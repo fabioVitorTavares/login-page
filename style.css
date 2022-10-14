@@ -57,9 +57,7 @@ body {
     
 }
 
-#input-password{
-    
-}
+
 
 #img-eye{
     color: rgb(4, 81, 163);
@@ -74,7 +72,7 @@ body {
 
 #button-enter{
     border: none;
-    border-radius: 15px;
+    border-radius: 20px;
     height: 10%;
     width: 50%;
     background-color:  #006fe6;
@@ -93,6 +91,7 @@ body {
 }
 
 .inputs:hover{
+    
     background-color: rgb(236, 236, 236);
 }
 
@@ -103,3 +102,4 @@ body {
 #recover-password-register{
     text-align: center;
 }
+
