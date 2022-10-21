@@ -1,6 +1,7 @@
 *{
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 ::-ms-reveal {
@@ -8,8 +9,8 @@
 }
 
 body {
-    text-align: center;    
-
+    text-align: center; 
+    background-color: black;
 }
 
 .form{
@@ -18,8 +19,11 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
-    height: 500px;
-   
+    height: 500px;  
+}
+
+#form-welcome {
+    display: none;    
 }
 
 #form-register {
@@ -31,7 +35,7 @@ body {
     display: none;
 }
 
-#fieldset-login, #fieldset-register, #fieldset-recover-password{
+#fieldset-login, #fieldset-register, #fieldset-recover-password, #fieldset-welcome {
 
     width: 100%;
     height: 100%;
@@ -117,6 +121,12 @@ body {
     left: 175px;
 }
 
+#x-welcome {
+    position: absolute;
+    top: 10px;
+    left: 360px;
+}
+
 #recover-password-register{
     
     text-align: center;
@@ -144,6 +154,10 @@ body {
     
     top: 39.5%;
     left: 75%;
+}
+
+h2 {
+    color:rgb(0, 111, 230);
 }
 
 
