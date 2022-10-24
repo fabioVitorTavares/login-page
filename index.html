@@ -11,14 +11,17 @@
 <body>
     
     <form class="form" id="form-login" method="" action="">
-        <fieldset id="fieldset-login">            
+        <svg id="load" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="10" stroke="#006fe6" width="100px" heigth="100px" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path id="path-load" d="M50, 5 C 110,5 110,95 50,95 -10,95 -10,5 50,5"/>
+        </svg>            
+        <fieldset id="fieldset-login">
             <h2>Login</h2>            
             <div id="inputs-login">
                 <input class="inputs-login" id="input-user" type="text" placeholder="Usuário" autocomplete="off" aria-label="Usuário" required autofocus >
                 <input class="inputs-login" id="input-password" type="password" placeholder="Senha" aria-label="Senha" required>
                 <img id="img-eye" src="img/eye-close.svg" alt="icone-olho">
             </div>
-            <button class="button" id="button-enter">Entrar</button>
+            <button class="button" id="button-enter" type="submit">Entrar</button>
             <div id="recover-password-register">
                 <p>Esqueceu sua senha? 
                     <a id="click-aqui">Click aqui</a>
@@ -48,13 +51,19 @@
             <div id="inputs-recover-password">
                 <input class="inputs-recover-password" id="input-email-recover" type="email" placeholder="E-mail" autocomplete="off" aria-label="Email" required autofocus>
             </div>                      
-            <button class="button">Enviar</button>           
+            <button class="button" id="button-enviar">Enviar</button>           
         </fieldset>            
     </form>
     <div class="form" id="form-welcome">
         <div id="fieldset-welcome">
             <img class="x" id="x-welcome" src="img/x.svg" alt="">                     
             <h2>Bem Vindo!</h2>            
+        </div>
+    </div>
+    <div class="form" id="form-email-enviado">
+        <div id="fieldset-email-enviado">
+            <img class="x" id="x-email-enviado" src="img/x.svg" alt="">                     
+            <h2>E-mail enviado!</h2>            
         </div>
     </div>                      
     

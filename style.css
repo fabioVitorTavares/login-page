@@ -22,6 +22,10 @@ body {
     height: 500px;  
 }
 
+#form-email-enviado{
+    display: none;
+}
+
 #form-welcome {
     display: none;    
 }
@@ -35,7 +39,7 @@ body {
     display: none;
 }
 
-#fieldset-login, #fieldset-register, #fieldset-recover-password, #fieldset-welcome {
+#fieldset-login, #fieldset-register, #fieldset-recover-password, #fieldset-welcome, #fieldset-email-enviado {
 
     width: 100%;
     height: 100%;
@@ -68,7 +72,7 @@ body {
 }
 
 .inputs-login:focus-visible, .inputs-register:focus-visible, .inputs-recover-password:focus-visible {
-    outline: 2px solid  rgb(0, 111, 230) ;
+    outline: 2px solid  rgb(0, 111, 230);    
     background-color: white !important;
     border: none;
 }
@@ -98,7 +102,6 @@ body {
 }
 
 
-
 .button {
 
     border: none;
@@ -125,6 +128,12 @@ body {
     position: absolute;
     top: 10px;
     left: 360px;
+}
+
+#x-email-enviado {
+    position: absolute;
+    left: 360px;
+    top: 10px;
 }
 
 #recover-password-register{
@@ -160,6 +169,38 @@ h2 {
     color:rgb(0, 111, 230);
 }
 
+
+#path-load {
+    stroke-dasharray: 285;
+    stroke-dashoffset: 0;
+    animation: load 5s  infinite;
+}
+
+
+@keyframes load {
+   0%{
+        stroke-dashoffset: 285;
+   }
+   50%{
+        stroke-dashoffset: 200;
+   }
+   100%{
+        stroke-dashoffset: 0;
+   }
+}
+
+
+
+
+
+#load{        
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
 
 /*
 
