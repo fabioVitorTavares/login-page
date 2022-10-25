@@ -97,6 +97,10 @@ body {
     height: 50px;
 }
 
+#input-user:out-of-range{
+    outline: none;
+}
+
 .inputs-recover-password{
     height: 90%;
 }

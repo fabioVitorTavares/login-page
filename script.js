@@ -1,6 +1,7 @@
 const eye = document.getElementById('img-eye');
 const inputPassword = document.getElementById('input-password');
 const inputUser = document.querySelector('#input-user');
+const inputEmailRecover = document.querySelector('#input-email-recover');
 const formLogin = document.querySelector("#form-login");
 const formRegister = document.querySelector("#form-register");
 const formRecoverPassword = document.querySelector("#form-recover-password");
@@ -65,23 +66,30 @@ eye.onmouseup = ()=>{
     inputPassword.type = "password"; 
 };
 
+inputUser.addEventListener("input", () => {
+    const validateUser = /(?=.*[}{,^?~=+\-_\/*\-+\|\s])/;       
+    userValid = validateUser.test(String(inputUser.value)) ? false : true;
+ 
+    inputUser.style = "focus-visible outline: 2px solid  rgb(0, 111, 230)";        
+    if(!userValid){
+        inputUser.style = "outline: 2px solid  rgb(218, 25, 18)";        
+    }       
+}); 
+
 
 inputPassword.oninput  = () =>  {  
-    inputUser.style = "outline: 2px solid  rgb(0, 111, 230)";    
     inputPassword.style = inputPassword.value != '' ? "outline: 2px solid  rgb(0, 111, 230); border: none" : "";
     eye.style.visibility = inputPassword.value != '' ? 'visible' : 'hidden';       
     
     const validatePassword = /(?=.*[}{,.^?~=+\-_\/*\-+.\|])(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}/;    
     passwordValid = (validatePassword.test(String(inputPassword.value)));    
-    console.log(userValid, passwordValid);    
+    
+    inputPassword.style = "focus-visible outline: 2px solid  rgb(0, 111, 230)";
+    if(!passwordValid){
+        inputPassword.style = "outline: 2px solid  rgb(218, 25, 18)";
+    }   
 };
 
-inputUser.addEventListener("input", () => {
-    inputUser.style = "outline: 2px solid  rgb(0, 111, 230)";
-    const validateUser = /(?=.*[}{,^?~=+\-_\/*\-+\|\s])/;       
-    userValid = validateUser.test(String(inputUser.value)) ? false : true;
-    console.log(userValid,passwordValid);
-}); 
 
 
 buttonEntrar.addEventListener("click", () => {    
@@ -97,23 +105,38 @@ buttonEntrar.addEventListener("click", () => {
             load.style = "display : none";
 
             if (!userValid) {
-                inputUser.style = "outline: 2px solid  rgb(218, 25, 18)";
+                inputUser.style = "focus-visible outline: 2px solid  rgb(218, 25, 18)";
             }
     
             if (!passwordValid) {
-                inputPassword.style = "outline: 2px solid  rgb(218, 25, 18)";
+                inputPassword.style = "focus-visible outline: 2px solid  rgb(218, 25, 18)";
             }
         },5000);        
     }
 });
 
+
+
 buttonEnviar.addEventListener("click", (e) => {
-    e.preventDefault();
-    console.log('ok');
+    e.preventDefault();    
     
-    formRecoverPassword.style = "Display : none";
-    formEmailEnviado.style = "Display : block"
+    if(emailValid){
+        formRecoverPassword.style = "Display : none";
+        formEmailEnviado.style = "Display : block"
+    }
 });
+
+let emailValid = false;
+inputEmailRecover.addEventListener("input", () => {
+    const emailValidate = /.*@.+/;
+    emailValid = emailValidate.test(inputEmailRecover.value);
+    
+    inputEmailRecover.style = "focus-visible "
+    if(!emailValid){
+        inputEmailRecover.style = "outline: 2px solid  rgb(218, 25, 18)";
+    }
+});
+
 
 /*
     24/10/2022
