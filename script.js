@@ -2,6 +2,10 @@ const eye = document.getElementById('img-eye');
 const inputPassword = document.getElementById('input-password');
 const inputUser = document.querySelector('#input-user');
 const inputEmailRecover = document.querySelector('#input-email-recover');
+const inputUserRegister = document.querySelector('#input-user-register');
+const inputEmailRegister = document.querySelector('#input-email-register');
+const inputPasswordRegister = document.querySelector('#input-password-register');
+const inputPasswordConfirmRegister = document.querySelector('#input-password-register-confirm');
 const formLogin = document.querySelector("#form-login");
 const formRegister = document.querySelector("#form-register");
 const formRecoverPassword = document.querySelector("#form-recover-password");
@@ -138,10 +142,6 @@ inputEmailRecover.addEventListener("input", () => {
 });
 
 
-const inputUserRegister = document.querySelector('#input-user-register');
-const inputEmailRegister = document.querySelector('#input-email-register');
-const inputPasswordRegister = document.querySelector('#input-password-register');
-const inputPasswordConfirmRegister = document.querySelector('#input-password-register-confirm');
 
 let = userRegisterValid = false;
 inputUserRegister.addEventListener("input", () => {
@@ -187,6 +187,3 @@ inputPasswordConfirmRegister.addEventListener("input", () => {
     }     
 });
 
-/*
-    24/10/2022
-*/
