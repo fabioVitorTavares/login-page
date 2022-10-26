@@ -131,12 +131,61 @@ inputEmailRecover.addEventListener("input", () => {
     const emailValidate = /.*@.+/;
     emailValid = emailValidate.test(inputEmailRecover.value);
     
-    inputEmailRecover.style = "focus-visible "
+    inputEmailRecover.style = "focus-visible outline: 2px solid  rgb(0, 111, 230)"
     if(!emailValid){
         inputEmailRecover.style = "outline: 2px solid  rgb(218, 25, 18)";
     }
 });
 
+
+const inputUserRegister = document.querySelector('#input-user-register');
+const inputEmailRegister = document.querySelector('#input-email-register');
+const inputPasswordRegister = document.querySelector('#input-password-register');
+const inputPasswordConfirmRegister = document.querySelector('#input-password-register-confirm');
+
+let = userRegisterValid = false;
+inputUserRegister.addEventListener("input", () => {
+    const validateUserRegister = /(?=.*[}{,^?~=+\-_\/*\-+\|\s])/;       
+    userRegisterValid = validateUserRegister.test(String(inputUserRegister.value)) ? false : true;
+
+    inputUserRegister.style = "focus-visible outline: 2px solid  rgb(0, 111, 230)";        
+    if(!userRegisterValid){
+        inputUserRegister.style = "outline: 2px solid  rgb(218, 25, 18)";        
+    } 
+});
+
+let emailRegisterValid = false;
+inputEmailRegister.addEventListener("input", () => {
+    const validateEmailRegister = /.*@.+/;
+    emailRegisterValid = validateEmailRegister.test(inputEmailRegister.value);
+    
+    inputEmailRegister.style = "focus-visible outline: 2px solid  rgb(0, 111, 230)"
+    if(!emailRegisterValid){
+        inputEmailRegister.style = "outline: 2px solid  rgb(218, 25, 18)";
+    }    
+});
+
+let passwordRegisterValid = false;
+inputPasswordRegister.addEventListener("input", () => {
+      
+    const validatePasswordRegister = /(?=.*[}{,.^?~=+\-_\/*\-+.\|])(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}/;    
+    passwordRegisterValid = (validatePasswordRegister.test(String(inputPasswordRegister.value)));    
+    
+    inputPasswordRegister.style = "focus-visible outline: 2px solid  rgb(0, 111, 230)";
+    if(!passwordRegisterValid){
+        inputPasswordRegister.style = "outline: 2px solid  rgb(218, 25, 18)";
+    }   
+});
+
+passwordRegisterConfirmValid = false;
+inputPasswordConfirmRegister.addEventListener("input", () => {
+    passwordRegisterConfirmValid = inputPasswordRegister.value === inputPasswordConfirmRegister.value ? true : false;    
+    
+    inputPasswordConfirmRegister.style = "focus-visible outline: 2px solid  rgb(0, 111, 230)";
+    if(!passwordRegisterConfirmValid){
+        inputPasswordConfirmRegister.style = "outline: 2px solid  rgb(218, 25, 18)";
+    }     
+});
 
 /*
     24/10/2022
