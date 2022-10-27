@@ -1,3 +1,5 @@
 Login Page
 
-Pagina de login como ferramenta de vizualização da senha digitada e também com links de direcionamento para paginas de cadastro e recuperação de senha.
+Página de login com com recurso de link para recuperação de senha e formulario de cadastro rápido, também faz validações dos campos em tempo de digitação.
+
+![login-page](https://user-images.githubusercontent.com/74937496/198174749-a61ad3c8-29ce-4fa8-978f-494469475133.png)
